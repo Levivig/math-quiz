@@ -6,7 +6,6 @@
 //  Copyright © 2018. Levente Vig. All rights reserved.
 //
 
-import Firebase
 import RxCocoa
 import RxSwift
 import UIKit

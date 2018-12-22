@@ -12,7 +12,6 @@
 		1B00851C2160B36C00610507 /* UIView+ShakeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B00851B2160B36C00610507 /* UIView+ShakeAnimation.swift */; };
 		1B0407462173655000E879C2 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0407452173655000E879C2 /* Enums.swift */; };
 		1B0E47DA2184B7BC00A25244 /* UIView+HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0E47D92184B7BC00A25244 /* UIView+HideKeyboard.swift */; };
-		1B1766A1215FBEDF002BCC8F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B1766A0215FBEDF002BCC8F /* GoogleService-Info.plist */; };
 		1B266ED3217E51BA00AC6B4D /* SectionedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B266ED2217E51BA00AC6B4D /* SectionedData.swift */; };
 		1B266ED5217E52D900AC6B4D /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B266ED4217E52D900AC6B4D /* BaseModel.swift */; };
 		1B3B85A1219AD1FC00545349 /* UILabel+BlinkAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B85A0219AD1FC00545349 /* UILabel+BlinkAnimation.swift */; };
@@ -120,7 +119,6 @@
 		1B0085242160C4B500610507 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B0407452173655000E879C2 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		1B0E47D92184B7BC00A25244 /* UIView+HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+HideKeyboard.swift"; sourceTree = "<group>"; };
-		1B1766A0215FBEDF002BCC8F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1B266ED2217E51BA00AC6B4D /* SectionedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedData.swift; sourceTree = "<group>"; };
 		1B266ED4217E52D900AC6B4D /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		1B3B85A0219AD1FC00545349 /* UILabel+BlinkAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UILabel+BlinkAnimation.swift"; path = "rft/Utilities/Extensions/Animations/UILabel+BlinkAnimation.swift"; sourceTree = SOURCE_ROOT; };
@@ -206,6 +204,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EDE6ADC3DC24D6C9B78F104C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -255,7 +260,6 @@
 			isa = PBXGroup;
 			children = (
 				1B7E84C5215F74D900574C33 /* Info.plist */,
-				1B1766A0215FBEDF002BCC8F /* GoogleService-Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -468,6 +472,7 @@
 			buildPhases = (
 				1B585B3A21A14EFA0029F0DC /* Resources */,
 				1B585B5F21A14EFE0029F0DC /* Embed App Extensions */,
+				EDE6ADC3DC24D6C9B78F104C /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -505,8 +510,6 @@
 				1B7E84B1215F74D600574C33 /* Frameworks */,
 				1B7E84B2215F74D600574C33 /* Resources */,
 				65D3A4A2526F06A893BA8AEA /* [CP] Embed Pods Frameworks */,
-				C582C9C12BB7679E08D00A9D /* [CP] Copy Pods Resources */,
-				1B005319217E800C0033F9F0 /* ShellScript */,
 				1B0E47DB2184E41500A25244 /* ShellScript */,
 				1B585B6121A14EFE0029F0DC /* Embed Watch Content */,
 			);
@@ -608,7 +611,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B7E84C4215F74D900574C33 /* LaunchScreen.storyboard in Resources */,
-				1B1766A1215FBEDF002BCC8F /* GoogleService-Info.plist in Resources */,
 				1B7E84C1215F74D900574C33 /* Assets.xcassets in Resources */,
 				1B7E84BF215F74D600574C33 /* Main.storyboard in Resources */,
 			);
@@ -624,23 +626,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1B005319217E800C0033F9F0 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\" 0af2df4c6d3cbfadc6c3646de9da2dcbf2d18587 91360754e7a98c2b39887e5198838db9540f28622e8a484fd017b7aaf1b1a550\n";
-		};
 		1B0E47DB2184E41500A25244 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -667,10 +652,6 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-rft/Pods-rft-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/PullToRefreshKit/PullToRefreshKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -684,16 +665,12 @@
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyTimer/SwiftyTimer.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/iosMath/iosMath.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PullToRefreshKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -707,7 +684,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyTimer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iosMath.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -748,24 +725,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C582C9C12BB7679E08D00A9D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-rft/Pods-rft-resources.sh",
-				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rft/Pods-rft-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
