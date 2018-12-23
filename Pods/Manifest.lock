@@ -1,7 +1,7 @@
 PODS:
   - Alamofire (4.7.3)
   - Differentiator (3.1.0)
-  - iosMath (0.9.4)
+  - Hero (1.4.0)
   - PullToRefreshKit (0.8.8)
   - Realm (3.11.1):
     - Realm/Headers (= 3.11.1)
@@ -41,7 +41,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
-  - iosMath
+  - Hero
   - PullToRefreshKit
   - RealmSwift
   - RevealingSplashView
@@ -59,7 +59,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Differentiator
-    - iosMath
+    - Hero
     - PullToRefreshKit
     - Realm
     - RealmSwift
@@ -77,7 +77,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
-  iosMath: f7a6cbadf9d836d2149c2a84c435b1effc244cba
+  Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   PullToRefreshKit: 7cc53e720e69f135cffa1a57784dfb534f0222ab
   Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
   RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
@@ -92,6 +92,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   SwiftyTimer: 02dd6cf10cbc71cbf67cec494f6e5eb782102543
 
-PODFILE CHECKSUM: 7cd47b08eaa090e74477105c0864b3726ff4c7d5
+PODFILE CHECKSUM: a39438a153641b620b3dfda587aaf7972595bca1
 
 COCOAPODS: 1.5.3

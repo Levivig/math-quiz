@@ -6,7 +6,7 @@ target 'rft' do
     
     # Pods for rft
     pod 'Alamofire', '~> 4.7'
-    pod 'iosMath'
+    pod 'Hero'
     pod 'PullToRefreshKit'
     pod 'RealmSwift'
     pod 'RevealingSplashView'

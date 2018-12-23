@@ -9,6 +9,7 @@
 import RxCocoa
 import RxSwift
 import UIKit
+import Hero
 
 class MainMenuViewController: UIViewController {
 
@@ -53,9 +54,29 @@ class MainMenuViewController: UIViewController {
     func setupTableView() {
         tableView.rx.itemSelected.subscribe(onNext: { [weak self] indexPath in
             NSLog("✅ Row \(indexPath.row) selected")
-			DispatchQueue.main.async(execute: {
-				self?.performSegue(withIdentifier: Constants.Segues.StartGame, sender: nil)
-			})
+			let heroID = "diff\(indexPath.row)"
+			guard let cell = self?.tableView.cellForRow(at: indexPath) as? DifficultyCell else { return }
+			cell.hero.id = heroID
+			cell.levelImageView.alpha = 0
+			cell.titleLabel.alpha = 0
+
+			if let navController = self?.storyboard?.instantiateViewController(withIdentifier: Constants.ViewControllers.GameNavigationController) as? UINavigationController {
+				if navController.viewControllers.first is BaseGameViewController {
+					let gameController = navController.viewControllers.first as? BaseGameViewController
+					let selectedLevel = self?.tableView.indexPathForSelectedRow?.row
+
+					gameController?.hero.isEnabled = true
+					gameController?.view.hero.id = heroID
+
+					if let difficulty = DifficultyLevel(rawValue: selectedLevel ?? 0) {
+						gameController?.difficultyLevel = difficulty
+						self?.present(navController, animated: true, completion: {
+							cell.levelImageView.alpha = 1
+							cell.titleLabel.alpha = 1
+						})
+					}
+				}
+			}
         }).disposed(by: disposeBag)
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
         tableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 0, right: 0)
@@ -72,6 +93,10 @@ class MainMenuViewController: UIViewController {
 				if navController?.viewControllers.first is BaseGameViewController {
 					let gameController = navController?.viewControllers.first as? BaseGameViewController
 					let selectedLevel = tableView.indexPathForSelectedRow?.row
+
+					gameController?.hero.isEnabled = true
+					gameController?.view.hero.id = "gameStart"
+
 					if let difficulty = DifficultyLevel(rawValue: selectedLevel ?? 0) {
 						gameController?.difficultyLevel = difficulty
 					}

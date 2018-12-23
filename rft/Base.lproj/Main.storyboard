@@ -280,9 +280,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="tableView" destination="OKa-JP-sjs" id="qtv-TA-RM3"/>
-                        <segue destination="jyp-M6-6Mh" kind="showDetail" identifier="StartGame" id="jrI-hU-V02"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVX-0I-QO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -304,21 +306,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kd6-Je-FWo">
-                                <rect key="frame" x="0.0" y="117" width="375" height="501"/>
+                                <rect key="frame" x="0.0" y="117" width="375" height="550"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Lw-dl-yNh" customClass="SRCountdownTimer" customModule="SRCountdownTimer">
-                                <rect key="frame" x="94" y="274" width="187.5" height="187.5"/>
+                                <rect key="frame" x="94" y="298.5" width="187.5" height="187.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9Lw-dl-yNh" secondAttribute="height" multiplier="1:1" id="VaS-4c-fqF"/>
                                 </constraints>
                             </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="N8p-WL-43z">
-                                <rect key="frame" x="177.5" y="357.5" width="20" height="20"/>
+                                <rect key="frame" x="177.5" y="382" width="20" height="20"/>
                             </activityIndicatorView>
                             <button opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHr-vo-J7f">
-                                <rect key="frame" x="167" y="326" width="41" height="30"/>
+                                <rect key="frame" x="167" y="350.5" width="41" height="30"/>
                                 <state key="normal" title="Finish"/>
                             </button>
                         </subviews>
@@ -655,6 +657,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="rfM-CS-Shp" kind="relationship" relationship="rootViewController" id="Np6-fC-cjn"/>
                     </connections>
