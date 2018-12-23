@@ -33,8 +33,18 @@ class GameViewController: UIViewController {
 			.bind(to: questionLabel.rx.text)
 			.disposed(by: disposeBag)
 
-		answerTextField.addDoneButtonToKeyboard(with: self, myAction: #selector(self.didEnterAnswer(_:)))
+		answerTextField.addDoneButtonToKeyboard(with: self, myAction: #selector(self.didEnterAnswer(_:)), minusAction: #selector(self.insertMinus(_:)))
     }
+
+	@objc private func insertMinus(_ sender: Any) {
+		guard answerTextField.text?.isEmpty ?? false else {
+			if let number = Int(answerTextField.text ?? "") {
+				answerTextField.text = String(describing: number * -1)
+			}
+			return
+		}
+		answerTextField.text = "-"
+	}
 
 	@objc private func didEnterAnswer(_ sender: Any) {
 		var isCorrect = false

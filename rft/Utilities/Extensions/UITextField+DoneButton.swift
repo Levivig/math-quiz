@@ -11,14 +11,16 @@ import UIKit
 
 extension UITextField {
 
-	func addDoneButtonToKeyboard(with target: Any, myAction:Selector?) {
+	func addDoneButtonToKeyboard(with target: Any, myAction:Selector?, minusAction:Selector?) {
         let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 300, height: 40))
         doneToolbar.barStyle = UIBarStyle.default
 
+		let minusButton = UIBarButtonItem(title: "-", style: .plain, target: target, action: minusAction)
         let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
 		let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: target, action: myAction)
 
         var items = [UIBarButtonItem]()
+		items.append(minusButton)
         items.append(flexSpace)
         items.append(done)
 
