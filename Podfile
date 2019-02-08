@@ -8,7 +8,6 @@ target 'rft' do
     pod 'Alamofire', '~> 4.7'
     pod 'Hero'
     pod 'PullToRefreshKit'
-    pod 'RealmSwift'
     pod 'RevealingSplashView'
     pod 'RxCocoa',    '~> 4.0'
     pod 'RxDataSources', '~> 3.1'

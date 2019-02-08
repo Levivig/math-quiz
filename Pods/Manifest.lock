@@ -3,11 +3,6 @@ PODS:
   - Differentiator (3.1.0)
   - Hero (1.4.0)
   - PullToRefreshKit (0.8.8)
-  - Realm (3.11.1):
-    - Realm/Headers (= 3.11.1)
-  - Realm/Headers (3.11.1)
-  - RealmSwift (3.11.1):
-    - Realm (= 3.11.1)
   - RevealingSplashView (0.6.0)
   - RxCocoa (4.3.1):
     - RxSwift (~> 4.0)
@@ -43,7 +38,6 @@ DEPENDENCIES:
   - Alamofire (~> 4.7)
   - Hero
   - PullToRefreshKit
-  - RealmSwift
   - RevealingSplashView
   - RxCocoa (~> 4.0)
   - RxDataSources (~> 3.1)
@@ -61,8 +55,6 @@ SPEC REPOS:
     - Differentiator
     - Hero
     - PullToRefreshKit
-    - Realm
-    - RealmSwift
     - RevealingSplashView
     - RxCocoa
     - RxDataSources
@@ -79,8 +71,6 @@ SPEC CHECKSUMS:
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   PullToRefreshKit: 7cc53e720e69f135cffa1a57784dfb534f0222ab
-  Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
-  RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
   RevealingSplashView: 40c5a770894459736acdc95655eeba0dd30ce91c
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
@@ -92,6 +82,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   SwiftyTimer: 02dd6cf10cbc71cbf67cec494f6e5eb782102543
 
-PODFILE CHECKSUM: a39438a153641b620b3dfda587aaf7972595bca1
+PODFILE CHECKSUM: 88de315b1f198e3b529c58a86fbd536e79d87973
 
 COCOAPODS: 1.5.3

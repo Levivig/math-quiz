@@ -51,7 +51,7 @@ class GameViewController: UIViewController {
 
 		correctLabel.layer.removeAllAnimations()
 		correctLabel.text = "Wrong"
-		correctLabel.textColor = Theme.red
+		correctLabel.textColor = UIColor.red
 		UIView.animate(withDuration: 0.5, animations: { [weak self] in
 			self?.correctLabel.alpha = 1
 		})
@@ -61,7 +61,7 @@ class GameViewController: UIViewController {
 				if answer == exercise.value.correctAnswer {
 					isCorrect = true
 					correctLabel.text = "Correct"
-					correctLabel.textColor = Theme.lightGreen
+					correctLabel.textColor = UIColor.lightGreen
 				}
 			}
 		}

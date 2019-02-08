@@ -6,10 +6,10 @@
 //  Copyright © 2018. Levente Vig. All rights reserved.
 //
 
+import Hero
 import RxCocoa
 import RxSwift
 import UIKit
-import Hero
 
 class MainMenuViewController: UIViewController {
 
@@ -60,7 +60,8 @@ class MainMenuViewController: UIViewController {
 			cell.levelImageView.alpha = 0
 			cell.titleLabel.alpha = 0
 
-			if let navController = self?.storyboard?.instantiateViewController(withIdentifier: Constants.ViewControllers.GameNavigationController) as? UINavigationController {
+			if let navController = self?.storyboard?.instantiateViewController(
+				withIdentifier: Constants.ViewControllers.GameNavigationController) as? UINavigationController {
 				if navController.viewControllers.first is BaseGameViewController {
 					let gameController = navController.viewControllers.first as? BaseGameViewController
 					let selectedLevel = self?.tableView.indexPathForSelectedRow?.row

@@ -22,17 +22,17 @@ class DifficultyProvider {
         var beginner = Difficulty()
         beginner.name = "Beginner"
         beginner.image = UIImage(named: "beginner")
-		beginner.color = Theme.lightGreen
+		beginner.color = UIColor.lightGreen
 
         var intermediate = Difficulty()
         intermediate.name = "Intermediate"
         intermediate.image = UIImage(named: "intermediate")
-		intermediate.color = Theme.orange
+		intermediate.color = UIColor.orange
 
         var advanced = Difficulty()
         advanced.name = "Advanced"
         advanced.image = UIImage(named: "advanced")
-		advanced.color = Theme.red
+		advanced.color = UIColor.red
 
         return [beginner, intermediate, advanced]
     }
